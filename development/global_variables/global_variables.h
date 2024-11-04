@@ -7,8 +7,10 @@
 #define CLEAR "clear"
 #endif
 
+#include "../include/get_terminal_size.h"
+
 // Genişlik ve yükseklik ayarları
-const int width = 150;
+const int width = get_terminal_width();
 const int height = 28;
 
 // Ateş karakterleri

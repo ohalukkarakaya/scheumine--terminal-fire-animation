@@ -27,5 +27,6 @@ void generateFire() {
         if (i % width == width - 1)
             fireString += '\n';
     }
-    std::cout << fireString;
+    int terminalHeight = getTerminalHeight();
+    std::cout << "\033[" << terminalHeight - height << ";1H" << fireString << "\033[0m";
 }
