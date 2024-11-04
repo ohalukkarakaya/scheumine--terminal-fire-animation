@@ -22,7 +22,8 @@ void generateFire() {
     // Ateş efektini terminale yazdır
     std::string fireString;
     for (int i = 0; i < width * (height - 1); ++i) {
-        fireString += fireChars[firePixelsArray[i]];
+        int colorIndex = firePixelsArray[i] * 10 / maxCharIndex;
+        fireString += colorCodes[colorIndex] + fireChars[firePixelsArray[i]];
         if (i % width == width - 1)
             fireString += '\n';
     }
